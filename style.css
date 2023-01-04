@@ -1,7 +1,6 @@
 body{
     height: 100vh;
-    background: rgb(24,24,24);
-    background: linear-gradient(49deg, rgba(24,24,24,1) 0%, rgba(72,74,74,1) 40%, rgba(64,64,64,1) 57%, rgba(39,71,78,1) 100%);
+    background: rgb(24, 24, 24);
     display: grid;
 }
 
@@ -35,13 +34,13 @@ body{
 
 .up-card{
     position: fixed;
-    transition: all 0.2s;
-    transform: scale(0.25) translateY(-75rem);
+    transition: all 0.4s;
+    transform: scale(0.25) translate(-40rem, -75rem);
 }
 
 .down-card{
     position: fixed;
-    transition: all 0.2s;
-    transform: scale(0.25) translateY(75rem);
+    transition: all 0.4s;
+    transform: scale(0.25) translate(40rem, 75rem);
 }
   

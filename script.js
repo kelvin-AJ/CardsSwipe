@@ -98,7 +98,7 @@ function moveCards(e, cardEl) {
 
     const dragDistanceY = -(Math.trunc(startPageY - touchObject.pageY));
 
-    // topCard.style.transform = `translate(0px, ${dragDistanceY}px)`;
+    
 
     if(elapsedTime < 300 && dragDistanceY < -150){
         cardEl.classList.add("up-card");
@@ -107,11 +107,14 @@ function moveCards(e, cardEl) {
         complete = true
     }
 
-    if(elapsedTime < 300 && dragDistanceY > 150){
+    else if(elapsedTime < 300 && dragDistanceY > 150){
         cardEl.classList.add("down-card");
         cardEl.classList.remove("top-card");
         cardEl.style.zIndex = `${++count}`
         complete = true
+    }
+    else {
+        // cardEl.style.transform = `translate(0px, ${dragDistanceY}px)`;
     }
 }
 
@@ -126,8 +129,7 @@ function updateTopCard() {
     complete = false
 
     const domCardsStack = [...document.querySelectorAll(".normal-card")]
-    const lastCard = domCardsStack[domCardsStack.length -1 ]
-    console.log(lastCard)
+    const lastCard = domCardsStack[domCardsStack.length -1 ];
 
     if(lastCard.classList.contains("top-card")) return;
 
